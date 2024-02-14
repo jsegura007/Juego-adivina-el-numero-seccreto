@@ -1,9 +1,3 @@
-
-// estos valores son importantes pero  hacer una variable por cada uno es tardio mejor se hace una funcion y se termia mas rapido
-
-//let titulo = document.querySelector('h1');
-//titulo.innerHTML = "JUEGO DEL NUMERO SECRETO";
-
 //let parrafo = document.querySelector("p");
 //parrafo.innerHTML = "Indica un numero del 1 al 10" ;
 
@@ -36,9 +30,9 @@ function verificarIntento(){
                 asignarTextoElElemento('p',"El numero es mayor al numero secreto");
             }else{
                 asignarTextoElElemento('p',"el numero es menor al numero secreto");
-
             }
             numeroIntentos++;
+            limpiarCaja();
     }
     return;
 }
@@ -74,7 +68,7 @@ function condicionesIniciales (){
     asignarTextoElElemento('h1',"JUEGO DEL NUMERO SECRETO ");  //estas funciones reemplazan los codigos de arriba 
     asignarTextoElElemento('p',`Indica un numero del 1 al ${numeroMaximo}`);
     NumeroSecreto = generarNumeroSecreto();
-    numeroIntentos =1;
+    numeroIntentos = 1;
 }
 
 function reiniciarJuego(){
